@@ -24,16 +24,16 @@ describe('Server Module', ()=> {
     });
 
     it('200 if the name is in the query string', async ()=> {
-        let response = await serverRequest.get('/person?name=ali');
+        let response = await serverRequest.get('/person?name=x');
         
         expect(response.status).toEqual(200);
     });
     it('response object is correct', async ()=> {
-        let response = await serverRequest.get('/person?name=ishaq');
+        let response = await serverRequest.get('/person?name=z');
         expect(response.status).toEqual(200);
         // console.log(response);
         expect(response.body).toEqual({
-            name: "ishaq"
+            name: "z"
         });
     });
 });
