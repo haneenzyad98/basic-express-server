@@ -24,7 +24,9 @@ describe('Server Module', ()=> {
     });
 
     it('200 if the name is in the query string', async ()=> {
-        let response = await serverRequest.get('/person?name=z');
+
+        let response = await serverRequest.get('/person?name=x');
+
         
         expect(response.status).toEqual(200);
     });
