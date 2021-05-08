@@ -2,10 +2,10 @@
 
 const express = require('express');
 const app = express();
-const notFoundHandler = require('./handlers/404.js');
-const errorHandler = require('./handlers/500.js');
-const logger = require('./middlewares/logger.js');
-const validator = require('./middleware/validator');
+const notFoundHandler = require('./error-handlers/404.js');
+const errorHandler = require('./error-handlers/500.js');
+const logger = require('./middleware/logger.js');
+const validator = require('./middleware/validator.js');
 
 // Global Middleware
 app.use(logger);
